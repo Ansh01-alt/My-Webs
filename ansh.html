@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="ansh.css" />
+    <script
+      src="https://kit.fontawesome.com/089afc02f9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section>
+      <div class="logo"><h1>Welcome to My World</h1></div>
+      <div class="img-area"></div>
+      <img src="Jack.jpg" class="Ansh" />
+      <div id="Ansh"></div>
+      <!--This id had been used for changing bg image when clicking-->
+      <div class="content">
+        <h3>Let's Make<br />Something Creative</h3>
+        <p>
+          Hi,Myself Ansh.I am FrontEnd Web Developer responsible for
+          implementing visual and interactive elements that users engage with
+          through their web browser when using a web application.I have one
+          general responsibility: to ensure that website visitors can easily
+          interact with the page.
+        </p>
+        <a href="https://www.careerexplorer.com/careers/front-end-developer/">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Get Started
+        </a>
+      </div>
+      <p class="copyrightText">©2021.Ansh Dawson</p>
+    </section>
+    <div class="menuToggle" onclick="toggleMenu()"></div>
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href=""><p class="Home">Home</p></a>
+        </li>
+        <li>
+          <a href="#"><p class="About">About</p></a>
+        </li>
+        <li>
+          <a href="#"><p class="Work">Work</p></a>
+        </li>
+        <li>
+          <a href="#"><p class="Team">Team</p></a>
+        </li>
+        <li>
+          <a href="#"><p class="Contact">Contact</p></a>
+        </li>
+      </ul>
+      <div class="socialBar">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=100008248231052"
+              ><img src="facebook.png"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/ansh-bharti-889206191"
+              ><img class="link2" , src="linkedin.png" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.twitter.com/AnshBharti01?t=P-pS_05kBFOpxuJe2EcoXg&s=08"
+              ><img src="twitter.png"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/ansh.bharti01"
+              ><img src="instagram.png"
+            /></a>
+          </li>
+        </ul>
+        <a href="mailto:bhartiansh01@gmail.com" class="emailBx"
+          ><img src="email.png"
+        /></a>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const Ansh = document.getElementById("Ansh");
+      function randomColor() {
+        return Math.floor(Math.random() * 355);
+      }
+      Ansh.addEventListener("click", () => {
+        Ansh.style.backgroundColor =
+          "rgba(" +
+          randomColor() +
+          "," +
+          randomColor() +
+          "," +
+          randomColor() +
+          ")";
+      });
+
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".menuToggle");
+        var navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
